@@ -22,6 +22,7 @@ pipeline {
         stage('Build Application') {
             steps {
                 dir('todo-app/frontend') {
+                    sh 'chmod +x node_modules/.bin/*'
                     sh 'npx vite build'
                 }
             }
