@@ -22,7 +22,7 @@ pipeline {
         stage('Build Application') {
             steps {
                 dir('todo-app/frontend') {
-                    sh 'npm run build'
+                    sh 'npx vite build'
                 }
             }
         }
